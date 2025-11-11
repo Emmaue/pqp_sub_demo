@@ -76,3 +76,5 @@ desktop.ini
 tmp/
 temp/
 *.tmp
+
+docker-compose.yml
