@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: base_subscription
+    description: Raw candidate subscription data cleaned and simplified
+    columns:
+      - name: candid
+        description: Candidate ID
+      - name: start_date
+      - name: sub_days
+
+  - name: pause_data
+    description: Total number of days each candidate paused
+
+  - name: extension_data
+    description: Total number of extra days each candidate purchased
+
+  - name: subscription_status
+    description: Final subscription tracking model with expiration logic
+    columns:
+      - name: adjusted_end_date
+        description: Calculated date when subscription expires
+      - name: days_left
+      - name: is_expired

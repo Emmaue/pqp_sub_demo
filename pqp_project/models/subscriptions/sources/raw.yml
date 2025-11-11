@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_data                # This is the name used in source()
+    schema: public                # Use your actual schema in Postgres (check in PGAdmin)
+    tables:
+      - name: global_table
+        description: "Main candidate data pulled from Google Sheets"
+      - name: subscription_extensions
+        description: "Tracks added subscription days by users"
+      - name: subscription_pauses
+        description: "Tracks paused periods in a subscription"
